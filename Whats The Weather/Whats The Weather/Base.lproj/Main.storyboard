@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Whats_The_Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's The Weather?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpZ-TI-gL0">
+                                <rect key="frame" x="125" y="63" width="165" height="22"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your city" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9SP-4k-X46">
+                                <rect key="frame" x="152" y="98" width="111" height="21"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="qd1-0B-KcO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxk-eB-rvn">
+                                <rect key="frame" x="134" y="204" width="147" height="30"/>
+                                <state key="normal" title="What's The Weather?">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="findWeather:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fX3-rZ-qPh"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6es-Zg-cKN">
+                                <rect key="frame" x="32" y="140" width="351" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcb-wi-6Ku">
+                                <rect key="frame" x="32" y="242" width="351" height="194"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="gxk-eB-rvn" secondAttribute="centerX" id="389-yF-UVM"/>
+                            <constraint firstItem="6es-Zg-cKN" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="140" id="3q1-TU-h4S"/>
+                            <constraint firstItem="rcb-wi-6Ku" firstAttribute="top" secondItem="gxk-eB-rvn" secondAttribute="bottom" constant="8" id="Cws-s3-bjx"/>
+                            <constraint firstItem="UpZ-TI-gL0" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="43" id="FQm-pF-j9n"/>
+                            <constraint firstItem="gxk-eB-rvn" firstAttribute="top" secondItem="6es-Zg-cKN" secondAttribute="bottom" constant="34" id="VqU-zG-FxJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rcb-wi-6Ku" secondAttribute="trailing" constant="15" id="XEc-DV-xcB"/>
+                            <constraint firstItem="6es-Zg-cKN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="16" id="bWm-Rh-bRV"/>
+                            <constraint firstItem="6es-Zg-cKN" firstAttribute="top" secondItem="9SP-4k-X46" secondAttribute="bottom" constant="21" id="gca-DC-zgI"/>
+                            <constraint firstItem="9SP-4k-X46" firstAttribute="top" secondItem="UpZ-TI-gL0" secondAttribute="bottom" constant="13" id="hsn-rl-zcU"/>
+                            <constraint firstItem="rcb-wi-6Ku" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="16" id="q2V-b9-1jY"/>
+                            <constraint firstItem="6es-Zg-cKN" firstAttribute="centerX" secondItem="9SP-4k-X46" secondAttribute="centerX" id="qIS-bm-DyK"/>
+                            <constraint firstAttribute="centerX" secondItem="9SP-4k-X46" secondAttribute="centerX" id="qc3-j3-YFl"/>
+                            <constraint firstAttribute="centerX" secondItem="9SP-4k-X46" secondAttribute="centerX" id="s7y-Xh-e7i"/>
+                            <constraint firstAttribute="centerX" secondItem="UpZ-TI-gL0" secondAttribute="centerX" id="ycV-1s-HOT"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="rcb-wi-6Ku" id="I2G-zn-9fO"/>
+                        <outlet property="userCity" destination="6es-Zg-cKN" id="Yzh-2B-lIN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

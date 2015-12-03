@@ -23,11 +23,11 @@ class ViewController: UIViewController {
             
             if error == nil {
                 var urlContent = NSString(data: data, encoding: NSUTF8StringEncoding)
-                
+
                 println(urlContent)
                 
                 dispatch_async(dispatch_get_main_queue()) {
-                    self.webView.loadHTMLString(urlContent! as String, baseURL: nil)
+                    self.webView.loadHTMLString(urlContent as! String, baseURL: nil)
                 }
             }
         }
